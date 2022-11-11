@@ -6,7 +6,7 @@ function updateIfExists(id, body) {
   const url = `${BASE_URL}/constellations/${id}`;
   return axios.get(url)
   .then(({data}) => {
-    if(!{data}) throw `Constellation with this ${id} does not exist`;
+    if({data}) 
     return axios.put(url, body)
   })
   .then(({data}) => {
@@ -16,6 +16,15 @@ function updateIfExists(id, body) {
     return error.message;
   })
 };
+
+const body = {
+  "id": "UEUrlfX",
+  "name": "Columba",
+  "meaning": "Dove",
+  "starsWithPlanets": 3,
+  "quadrant": "SQ1"
+}
+updateIfExists('UEUrlfX', body)
 
 module.exports = {
   updateIfExists,

@@ -1,7 +1,11 @@
 {
   "constellations": [
     {
-      "id": "UEUrlfX"
+      "id": "UEUrlfX",
+      "name": "Columba",
+      "meaning": "Dove",
+      "starsWithPlanets": 3,
+      "quadrant": "SQ1"
     },
     {
       "id": "zb8QvVt",
